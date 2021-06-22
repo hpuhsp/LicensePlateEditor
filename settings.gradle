@@ -1,0 +1,3 @@
+rootProject.name = "LicensePlateEditor"
+include ':app'
+include ':plate-editor'

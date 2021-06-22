@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--KeyboardView-->
+    <item name="keyboardView" type="id" />
+    <item name="closeButton" type="id" />
+    <!--Plate Editor-->
+    <item name="keyboard" type="id" />
+</resources>
