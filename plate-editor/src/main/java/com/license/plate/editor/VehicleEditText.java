@@ -1,4 +1,4 @@
-package com.license.plate;
+package com.license.plate.editor;
 
 import android.content.Context;
 import android.util.AttributeSet;
@@ -6,10 +6,11 @@ import android.util.AttributeSet;
 import androidx.appcompat.widget.AppCompatEditText;
 
 /**
- * 绑定了车牌号键盘的输入框(EditText)
- *
- * @author Relish Wang
- * @since 2017/09/21
+ * @Description: 绑定了车牌号键盘的输入框(EditText)
+ * @Author: Hsp
+ * @Email: 1101121039@qq.com
+ * @CreateTime: 2021/6/23 9:25
+ * @UpdateRemark:
  */
 public class VehicleEditText extends AppCompatEditText {
 

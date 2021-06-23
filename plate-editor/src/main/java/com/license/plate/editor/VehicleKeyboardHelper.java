@@ -1,4 +1,4 @@
-package com.license.plate;
+package com.license.plate.editor;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
@@ -22,6 +22,8 @@ import android.widget.PopupWindow;
 
 import androidx.annotation.Nullable;
 
+import com.license.plate.R;
+
 
 /**
  * 输入框键盘绑定帮助类
@@ -29,7 +31,7 @@ import androidx.annotation.Nullable;
  * 直接在布局中使用该控件:
  * <pre>
  * <code>
- * &lt;wang.relish.vehicle.VehicleEditText
+ * &lt;com.license.plate.editor.VehicleEditText
  *      android:id="@+id/vet"
  *      android:layout_width="match_parent"
  *      android:layout_height="wrap_content" /&gt;
@@ -45,11 +47,13 @@ import androidx.annotation.Nullable;
  * </code>
  * </pre>
  *
- * @author Relish Wang
- * @since 2017/09/18
+ * @Author: Hsp
+ * @Email: 1101121039@qq.com
+ * @CreateTime: 2021/6/23 9:25
+ * @UpdateRemark:
  */
 public class VehicleKeyboardHelper {
-
+    // 省份信息，可以在此处进行维护
     private static final String PROVINCES =
             "京津渝沪冀晋辽吉黑苏浙皖闽赣鲁豫鄂湘粤琼川贵云陕甘青蒙桂宁新藏使领警学港澳";
 
@@ -138,6 +142,11 @@ public class VehicleKeyboardHelper {
                     }
                     // 不拦截
                 }
+                if (event.getAction() == MotionEvent.ACTION_DOWN) {
+                    showCustomInput(et, keyboard);
+                    return true;
+                }
+
                 return true;
             }
         });
@@ -164,6 +173,7 @@ public class VehicleKeyboardHelper {
         et.setOnKeyListener(new View.OnKeyListener() {
             @Override
             public boolean onKey(View v, int keyCode, KeyEvent event) {
+                Log.d("TAG", "onKey: -------et----------->" + keyCode);
                 if (keyCode == KeyEvent.KEYCODE_BACK) {
                     hideCustomInput(et);
                     return true;
@@ -218,11 +228,14 @@ public class VehicleKeyboardHelper {
         }
         if (keyboardWindow.isShowing()) return;
         keyboardWindow.setOutsideTouchable(false);
+        keyboardWindow.setFocusable(false);
         keyboard.setOnKeyListener(new View.OnKeyListener() {
             @Override
             public boolean onKey(View v, int keyCode, KeyEvent event) {
+                Log.d("TAG", "onKey: ------keyboard------------>" + keyCode);
                 if (keyCode == KeyEvent.KEYCODE_BACK) {
                     if (keyboardWindow != null && keyboardWindow.isShowing()) {
+                        Log.d("TAG", "onKey: ----------hideCustomInput-------->");
                         hideCustomInput(et);
                         return true;
                     }
@@ -252,13 +265,14 @@ public class VehicleKeyboardHelper {
     private static void hideCustomInput(EditText et) {
         if (et == null) return;
         if (!isActivityRunning(et.getContext())) return;
-        et.clearFocus();
+//        et.clearFocus();
         Object tag = et.getTag(R.id.keyboard);
         if (tag == null) return;
         if (tag instanceof PopupWindow) {
             PopupWindow window = (PopupWindow) tag;
             if (window.isShowing()) {
                 window.dismiss();
+                Log.d("TAG", "onKey: ----------dismiss-------->");
             }
         }
     }

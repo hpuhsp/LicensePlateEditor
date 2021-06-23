@@ -1,13 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar" />
-
     <!-- Plate Editor -->
     <style name="WindowAnimation" parent="@android:style/Animation.Dialog">
         <item name="android:windowEnterAnimation">@anim/dialog_enter</item>
         <!-- 进入时的动画 -->
         <item name="android:windowExitAnimation">@anim/dialog_exit</item>
         <!-- 退出时的动画 -->
+    </style>
+    <!-- Keyboard -->
+    <style name="KeyboardView" parent="android:Widget">
+        <item name="android:background">@color/keyboard_bg_color</item>
+        <item name="keyBackground">@drawable/key_bg</item>
+        <item name="keyTextSize">22sp</item>
+        <item name="keyTextColor">@color/black</item>
+        <item name="keyPreviewLayout">@layout/keyboard_key_preview</item>
+        <item name="keyPreviewOffset">-12dp</item>
+        <item name="keyPreviewHeight">80dp</item>
+        <item name="labelTextSize">14sp</item>
+        <item name="popupLayout">@layout/keyboard_popup_keyboard</item>
+        <item name="verticalCorrection">-10dp</item>
+        <item name="shadowColor">@android:color/transparent</item>
+        <item name="shadowRadius">2.75</item>
     </style>
 </resources>

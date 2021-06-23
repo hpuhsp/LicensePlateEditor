@@ -8,6 +8,9 @@
     <color name="white">#FFFFFFFF</color>
     <color name="dark_gray">#BBBBBB</color>
     <color name="black">#040404</color>
+    <color name="text_black">#3C3C3C</color>
+    <color name="transparent">#00000000</color>
+
     <color name="keyboard_bg_color">#D2D4DA</color>
     <color name="keyboard_dark_cell_bg_color">#ADB2BF</color>
 </resources>

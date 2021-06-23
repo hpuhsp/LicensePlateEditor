@@ -1,4 +1,4 @@
-package com.license.plate;
+package com.license.plate.editor;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
@@ -17,14 +17,17 @@ import android.view.WindowManager;
 
 import androidx.core.content.ContextCompat;
 
+import com.license.plate.R;
+
 import java.util.Arrays;
 import java.util.List;
 
 /**
- * 为KeyboardView编辑自定义样式
- *
- * @author Relish Wang
- * @since 2019/03/15
+ * @Description: KeyboardView自定义样式
+ * @Author: Hsp
+ * @Email: 1101121039@qq.com
+ * @CreateTime: 2021/6/23 9:24
+ * @UpdateRemark:
  */
 class VehicleKeyboardView extends KeyboardView {
 
@@ -162,6 +165,4 @@ class VehicleKeyboardView extends KeyboardView {
             }
         }
     }
-
-
 }

@@ -2,7 +2,7 @@ package com.plate.editor
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.license.plate.VehicleKeyboardHelper
+import com.license.plate.editor.VehicleKeyboardHelper
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {

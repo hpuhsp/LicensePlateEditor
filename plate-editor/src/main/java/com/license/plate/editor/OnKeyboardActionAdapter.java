@@ -1,4 +1,4 @@
-package com.license.plate;
+package com.license.plate.editor;
 
 import android.annotation.SuppressLint;
 import android.inputmethodservice.Keyboard;
@@ -6,10 +6,11 @@ import android.inputmethodservice.KeyboardView;
 import android.widget.EditText;
 
 /**
- * 实现了键盘通用功能的OnKeyboardActionListener
- *
- * @author Relish Wang
- * @since 2017/09/18
+ * @Description: 实现了键盘通用功能的OnKeyboardActionListener
+ * @Author: Hsp
+ * @Email: 1101121039@qq.com
+ * @CreateTime: 2021/6/23 9:33
+ * @UpdateRemark:
  */
 abstract class OnKeyboardActionAdapter implements KeyboardView.OnKeyboardActionListener {
 
