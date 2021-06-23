@@ -278,6 +278,26 @@ public class VehicleKeyboardHelper {
     }
 
     /**
+     * 校验当前是否显示弹框
+     *
+     * @param et
+     * @return
+     */
+    public static boolean checkShowingAndHide(EditText et) {
+        if (et == null) return false;
+        Object tag = et.getTag(R.id.keyboard);
+        if (tag == null) return false;
+        if (tag instanceof PopupWindow) {
+            PopupWindow window = (PopupWindow) tag;
+            if (window.isShowing()) {
+                window.dismiss();
+                return true;
+            }
+        }
+        return false;
+    }
+
+    /**
      * 隐藏系统输入法
      *
      * @param et 输入框控件
