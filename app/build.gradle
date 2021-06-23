@@ -53,5 +53,6 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
-    implementation project(':plate-editor')
+//    implementation project(':plate-editor')
+    implementation 'com.github.hpuhsp:LicensePlateEditor:1.2.0'
 }
