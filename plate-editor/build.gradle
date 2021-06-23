@@ -2,7 +2,9 @@ plugins {
     id 'com.android.library'
     id 'kotlin-android'
 }
-
+// JitPack 配置(以下两行)
+apply plugin: 'com.github.dcendents.android-maven'
+group = 'com.github.hpuhsp'
 android {
     compileSdkVersion 30
 
